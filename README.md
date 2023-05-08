@@ -1,6 +1,7 @@
 # Vertiv
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+[Video-Sat-May-06-2023-16-16-01.webm](https://user-images.githubusercontent.com/53033289/236868868-29c14d83-d224-4f38-ba4e-b11d2742b6a8.webm)
 
 ## Development server
 
