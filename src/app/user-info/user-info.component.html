@@ -1,0 +1,46 @@
+
+    <div class="content">
+      <form [formGroup]="SignupForm"  class="example-form">
+        <div>
+          <mat-form-field class="example-full-width">
+            <mat-label>user id</mat-label>
+            <input type="text" matInput placeholder="adam123" id="userId" formControlName="userId">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Select Date</mat-label>
+            <input matInput [matDatepicker]="dp3"  id="date" formControlName="date" >
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
+            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width">
+            <mat-label>Time</mat-label>
+            <input type="time" matInput id="time" formControlName="time">
+          </mat-form-field>
+        </div>
+        <mat-error  *ngIf="!SignupForm.valid && SignupForm.touched">
+          please enter valid data
+        </mat-error>
+
+        <button  mat-flat-button [disabled]="isDisabled" (click)='onSubmit()'>Submit</button>
+      </form>
+      <div class="col2">
+        
+          <mat-form-field class="example-full-width">
+            <mat-label>Generated Password</mat-label>
+            <input type="text" matInput [disabled]="true" value={{password}}>
+          </mat-form-field>
+         
+       
+        </div>
+    </div>
+    <div *ngIf="display" class="content">
+      <h2>Password Valid  for  </h2>
+      <span class="highlight"><h2>{{display}}</h2></span> 
+    </div>
+   
